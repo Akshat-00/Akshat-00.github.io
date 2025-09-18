@@ -9,27 +9,38 @@
 		<title>Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  		<!-- Local main CSS -->
+  		<link rel="stylesheet" href="assets/css/main.css" />
+  		<!-- Boxicons CDN -->
+  		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  		<!-- Local Font Awesome -->
+  		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  		<!-- Noscript fallback -->
+  		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
-					<nav>
+					<nav aria-label="Main navigation">
 						<ul>
 							<li><a href="#home">Home</a></li>
 							<li><a href="#about-me">About Me</a></li>
 							<li><a href="#education">Education</a></li>
 							<li><a href="#experience">Experience</a></li>
-							<li><a href="#skills">Skills</a></li>
 							<li><a href="#projects">Projects</a></li>
-							<li><a href="#contact">Contact Me</a></li>						
+							<li><a href="#skills">Skills</a></li>
+							<li><a href="#contact">Contact Me</a></li>
 						</ul>
 					</nav>
+
+					<div class="sidebar-cta">
+						<a href="assets/AKSHAT_GAUR_Resume.pdf" target="_blank" rel="noopener" class="resume-pill">
+							<i class='bx bx-download'></i>
+							<span>Resume</span>
+						</a>
+					</div>
 				</div>
 			</section>
 
@@ -40,20 +51,21 @@
 				<section id="home" class="wrapper style1 fullscreen fade-up">
 					
 					<div class="inner">
+
 						<!-- Styled Portfolio Title -->
-						<div class="portfolio-title">
+						<div class="portfolio-title" aria-hidden ="true">
 							<div class="line"></div>
 							<span>WELCOME TO MY PORTFOLIO</span>
 							<div class="line"></div>
 						</div>
 
-						<!-- Name with Highlighted Styling -->
+						<!-- Name -->
 						<h1><span class="highlight-name">AKSHAT GAUR</span></h1>
 
 						<!-- Professional Title -->
-						<h3>Data Science Practitioner | Machine Learning Engineer | AI Enthusiast</h3>
+						<h3>Data Analyst | Data Scientist | AI Enthusiast</h3>
 
-						<!-- Social Links with Icons -->
+						<!-- Social Links -->
 						<div class="social-icons">
 							<a href="https://linkedin.com/in/akshatgaur0610" target="_blank" class="icon linkedin">
 								<i class="bx bxl-linkedin"></i>
@@ -66,9 +78,10 @@
 							</a>
 						</div>
 					</div>
+					
 					<div class = "innerbutton">
 							<ul class="actions">
-							<li><a href="#about-me" class="button scrolly">Lets Begin!</a></li>
+							<li><a href="#about-me" class="button scrolly">Let's Begin!</a></li>
 							</ul>
 						</div>
 				</section>
@@ -76,46 +89,40 @@
 				<!-- About Me -->
 				<section id="about-me" class="wrapper style2">
 					<h2 class="about-heading">About Me</h2>
-					<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 					<div class="inner about-container">
+
 						<!-- Profile Image -->
 						<div class="about-image">
 							<img src="images/profile.jpg" alt="Akshat Gaur" loading="lazy">
 						</div>
+
 						<!-- About Me Text -->
 						<div class="about-content">
 							
 							<p>
-								Hi, I'm Akshat Gaur, a dedicated Data Scientist 
-								with a strong background in machine learning, data engineering, and database management. 
-								I specialize in uncovering hidden patterns in data, building predictive models, 
-								and creating data-driven solutions that drive real-world impact. 
-								Passionate about turning raw data into meaningful insights, I thrive on solving complex problems 
-								and optimizing decision-making through advanced analytics.
+								Hi, I’m Akshat Gaur, a data professional passionate about transforming raw data into clear, actionable insights. 
+								My journey began during my computer science undergrad, where I discovered a love for solving messy problems with SQL and Python. 
+								Since then, I’ve applied that curiosity to roles where I boosted student event participation by 45% through data analysis at DePaul University and automated workflows that cut manual approvals by 80%. 
+								At Profinch Solutions, I built ETL pipelines and compliance checks for financial datasets that improved reporting reliability and reduced anomalies.
+							</p>
+
+							<p>
+								I focus on making data both trustworthy and accessible by designing dashboards that make patterns obvious, validating data quality, and collaborating across teams to ensure insights drive impact. 
+								My core skills include SQL, Python, R, Tableau, Power BI, Excel, ETL workflows, and data visualization. Outside of work, 
+								I enjoy exploring financial markets and sports analytics, always looking for patterns that tell a story.
 							</p>
 
 							<p class ="exceptionp"><b>Know More ⬇</b></p>
+							<!-- Buttons to Navigate to Sections -->
 							<div class="aboutme-buttons">
 								<ul class="actions">
-									<li><a href="#education" class="button scrolly">Education</a></li>
+									<li><a href="#projects" class="button scrolly">Projects</a></li>
 								</ul>
 								<ul class="actions">
 									<li><a href="#experience" class="button scrolly">Experience</a></li>
 								</ul>
-								<ul class="actions">
-									<li><a href="#skills" class="button scrolly">Skills & Interests</a></li>
-								</ul>
 							</div>
 							
-						</div>
-						<div class="chatbot-container">
-							<div class="chatbot">
-								<img src="images/robot-assistant.png" alt="Chatbot">
-								<div class="chat-message">Check Out my Resume Here! </div>
-								<a href="assets/AKSHAT_GAUR_Resume.pdf" download class="resume-button">
-									<img src="images/resume.png" alt="Download Resume" class="resume-icon">
-								</a>						
-							</div>
 						</div>
 					</div>
 				</section>
@@ -126,15 +133,16 @@
 						<h2 class = "education-heading">Education</h2>
 
 						<div class="education-container">
+
 							<!-- Bachelor's Card -->
 							<div class="education-card">
 								<img src="images/bachelors.jpeg" alt="Bachelor's College Logo" class="college-logo">
 								<div class="education-details">
-									<h3> <b>MS Ramaiah University of Applied Sciences, Bangalore, INDIA </b></h3>
-									<p><i>Bachelor of Technology in Computer Science</i> </p>
-									<p> August 2018 - June 2022 </p>
-									<p><strong>Relevant Coursework:</strong> DSA | Programming | Operating Systems | Computer Networks | Databse Management | Software Development | Web Development | Cloud Computing </p>
-									<p><strong>GPA:</strong> [3.9]</p>
+								<h3><b>MS Ramaiah University of Applied Sciences, Bangalore, India</b></h3>
+								<p><i>Bachelor of Technology, Computer Science</i></p>
+								<p>Aug 2018 – Jun 2022</p>
+								<p><strong>Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Computer Networks, Database Management, Software Development, Cloud Computing</p>
+								<p><strong>GPA:</strong> 3.9</p>
 								</div>
 							</div>
 
@@ -142,11 +150,11 @@
 							<div class="education-card">
 								<img src="images/depaul.jpg" alt="Master's College Logo" class="college-logo">
 								<div class="education-details">
-									<h3><b> DePaul University, Chicago, IL</b></h3>
-									<p><i> Master of Science in Data Science </i></p>
-									<p> September 2023 - June 2025 </p>
-									<p><strong>Relevant Coursework:</strong> Data Analysis | Machine Learning | Data Visulization | Big Data Analytics | Databse Management | Image Processing </p>
-									<p><strong>GPA:</strong> [4.0]</p>
+								<h3><b>DePaul University, Chicago, IL</b></h3>
+								<p><i>Master of Science, Data Science</i></p>
+								<p>Sep 2023 – Jun 2025</p>
+								<p><strong>Relevant Coursework:</strong> Data Analysis, Machine Learning, Data Visualization, Big Data Analytics, Database Management, Image Processing</p>
+								<p><strong>GPA:</strong> 4.0</p>
 								</div>
 							</div>
 						</div>
@@ -154,72 +162,162 @@
 				</section>
 
 				<!-- Experience Section -->
+
 				<section id="experience" class="wrapper style2 fade-up">
-					<h2 class = "experience-heading">Experience</h2>
-					<div class="timeline">
-				
-						<!-- Timeline Item 1 -->
-						<div class="timeline-item">
-							<div class="timeline-icon">
-							<i class="bx bx-briefcase"></i> 
-							</div>
-							<div class="timeline-content">
-							<h3 class="timeline-employer">DePaul University Chicago, IL</h3>
-							<h4 class="timeline-jobtitle">IT AND OPERATIONS SUPPORT SPECIALIST </h4>
-							<span class="timeline-date"> July 2024 – Present</span>
+				<h2 class="experience-heading">Experience</h2>
 
-							<p>
-								<ul>
-									<li>Analyzed and optimized IT systems and workflows, enhancing functionality.</li>
-									<li>Resolved hardware and software issues to reduce downtime and improve service reliability.</li>
-									<li>Developed technical documentation and training materials for improved efficiency.</li>
-								</ul>
-							</p>
-							</div>
-						</div>
-					
-						<!-- Timeline Item 2 -->
-						<div class="timeline-item">
-							<div class="timeline-icon">
-							<i class="bx bx-briefcase"></i> 
-							</div>
-							<div class="timeline-content">
-							<h3 class="timeline-employer">Profinch Solutions Pvt Ltd Bangalore, INDIA</h3>
-							<h4 class="timeline-jobtitle">CONSULTANT - SOFTWARE ENGINEER </h4>
-							<span class="timeline-date"> July 2022 – May 2023</span>
+				<div class="timeline">
 
-							<p>
-								<ul>
-									<li>Designed and developed key website features for clients, strengthening software development skills.</li>
-									<li>Authored comprehensive product documentation for better user accessibility.</li>
-									<li>Gained proficiency in Angular, Spring Boot, and SQL.</li>
-								</ul>
-							</p>
-							</div>
-						</div>
-					
-						<!-- Timeline Item 3 -->
-						<div class="timeline-item">
-							<div class="timeline-icon">
-							<i class="bx bx-briefcase"></i> 
-							</div>
-							<div class="timeline-content">
-							<h3 class="timeline-employer">iDEX - DIO (Ministry of Defence) New Delhi, INDIA</h3>
-							<h4 class="timeline-jobtitle">WEB DEVELOPER INTERN </h4>
-							<span class="timeline-date"> Jule 2021 – July 2021</span>
+					<!-- Timeline Item 1 -->
+					<div class="timeline-item">
+					<div class="timeline-icon" aria-hidden="true"><i class="bx bx-briefcase"></i></div>
+					<div class="timeline-content">
+						<h3 class="timeline-jobtitle">Data and Operations Analyst</h3>
+						<h4 class="timeline-employer">DePaul University — Chicago, IL</h4>
+						<span class="timeline-date">Jul 2024 – Jun 2025</span>
+						<ul class="timeline-bullets">
+						<li>Analyzed career fair and student engagement data (1K+ records) with SQL & Python, uncovering attendance trends, most-visited companies, and feedback insights that drove a 45% boost in participation.</li>
+						<li>Automated Handshake account approvals using Excel VBA + enrollment data checks, reducing manual effort by 80% and improving onboarding accuracy.</li>
+						<li>Developed real-time Power BI dashboards to track engagement KPIs and system interactions, enabling self-service insights for career center leadership.</li>
+						<li>Diagnosed systemic IT issues by analyzing support ticket data, implementing fixes that cut response time by 40%.</li>
+						<li>Built and maintained a database of 150+ technology assets, creating monthly validation reports that improved allocation and resource planning.</li>
+						</ul>
+					</div>
+					</div>
 
-							<p>
-								<ul>
-									<li>Developed a fully functional web portal for the company's website, enhancing user engagement.</li>
-									<li>Collaborated with a team of 20 members to design and implement multiple web pages, to ensure seamless user experience. </li>
-								</ul>
-							</p>
-							</div>
+					<!-- Timeline Item 2 -->
+					<div class="timeline-item">
+					<div class="timeline-icon" aria-hidden="true"><i class="bx bx-briefcase"></i></div>
+					<div class="timeline-content">
+						<h3 class="timeline-jobtitle">Data Software Engineer</h3>
+						<h4 class="timeline-employer">Profinch Solutions — Bangalore, India</h4>
+						<span class="timeline-date">Jul 2022 – May 2023</span>
+						<ul class="timeline-bullets">
+  						<li>Designed and deployed ETL pipelines using SQL and backend frameworks to ingest, clean, and standardize core banking data, improving reliability of financial reporting and analytics turnaround.</li>
+  						<li>Developed Spring Boot and AngularJS modules to automate customer workflows and enhance product demonstrations, accelerating adoption of fintech solutions.</li>
+						<li>Implemented SQL-based validation rules and compliance checks, reducing anomalies and ensuring accurate regulatory submissions across banking datasets.</li>
+						<li>Built internal dashboards and monitoring tools to track pipeline performance and detect anomalies, enabling proactive resolution of bottlenecks.</li>
+						<li>Authored technical documentation and GitHub workflow guides, cutting onboarding time for junior analysts/engineers and improving cross-team collaboration.</li>
+						</ul>
+					</div>
+					</div>
+
+					<!-- Timeline Item 3 -->
+					<div class="timeline-item">
+					<div class="timeline-icon" aria-hidden="true"><i class="bx bx-briefcase"></i></div>
+					<div class="timeline-content">
+						<h3 class="timeline-jobtitle">Web Developer Intern</h3>
+						<h4 class="timeline-employer">iDEX – DIO (Ministry of Defence) — New Delhi, India</h4>
+						<span class="timeline-date">Jun 2021 – Jul 2021</span>
+						<ul class="timeline-bullets">
+						<li>Collaborated in a 20-person agile team to develop a contract management web portal, ensuring seamless integration between front-end components and backend data systems.</li>
+						<li>Designed dynamic, form-driven web pages to facilitate structured data capture, improving contract lifecycle transparency and reducing entry errors.</li>
+						<li>Built internal dashboards to track contract progress and performance metrics, enabling data-backed decision-making for defense operations.</li>
+						<li>Supported cross-team data flow optimization and API integrations, improving reporting speed and operational efficiency.</li>
+						</ul>
+					</div>
+					</div>
+				</div>
+				</section>
+
+				<!-- Projects Section -->
+				<section id="projects" class="wrapper style1 fade-up">
+					<div class="inner">
+						<h2 class="project-heading">Projects</h2>
+
+						<div class="projects-container">
+
+						<!-- Project A -->
+						<article class="project-card"
+							role="button" tabindex="0" aria-haspopup="dialog"
+							data-title="Expedia Clustering Analysis"
+							data-domain="Unsupervised ML"
+							data-stack="Python, Pandas, NumPy, scikit-learn, PCA, K-Means Clustering, Silhouette Score, Matplotlib"
+							data-description="Analyzed Expedia booking data to uncover meaningful customer patterns and built a clustering model that segmented users into four distinct traveler personas. By engineering behavioral features like trip length, booking frequency, and advance planning, I revealed insights that can help travel platforms design personalized marketing strategies, reduce wasted ad spend, and enhance customer engagement."
+							data-github="https://github.com/Akshat-00/expedia_clustering_analysis">
+							<h3 class="project-title">EXPEDIA CLUSTERING ANALYSIS</h3>
+							<span class="project-domain">Unsupervised ML</span>
+						</article>
+
+						<!-- Project B -->
+						<article class="project-card"
+							role="button" tabindex="0" aria-haspopup="dialog"
+							data-title="Apple Financial Analysis (2010–2020)"
+							data-domain="Financial Analytics / KPI Analysis"
+							data-stack="Python, Pandas, NumPy, scikit-learn (Linear Regression), Tableau, Excel"
+							data-description="Analyzed Apple’s 10-year financial performance to replicate a Financial Analyst workflow. Cleaned and structured raw Excel income statement data, engineered key KPIs (margins, ratios, growth), and conducted budget variance analysis alongside simple forecasting. Delivered insights through an interactive Tableau dashboard highlighting profitability trends, expense ratios, and scenario modeling for resilience testing."
+							data-github="https://github.com/Akshat-00/apple-financial-analysis">
+							<h3 class="project-title">APPLE FINANCIAL ANALYSIS (2010–2020)</h3>
+							<span class="project-domain">Financial Analytics / KPI Analysis</span>
+						</article>
+
+						<!-- Project C -->
+						<article class="project-card"
+							role="button" tabindex="0" aria-haspopup="dialog"
+							data-title="Uber Eats Restaurant Recommendation"
+							data-domain="Recommender Systems / Data Eng"
+							data-stack="Python,SQL, Apache Spark, PySpark, AWS (S3, Athena), Spark MLlib, Cosine Similarity, Feature Engineering"
+							data-description="Built a scalable restaurant recommendation system using Spark MLlib and AWS to analyze over 1M+ menu items and 60K restaurants. By engineering features around location and pricing and applying cosine similarity, the system achieved 90%+ match accuracy, uncovering dining trends and delivering smarter, more personalized restaurant suggestions than traditional cuisine-based approaches."
+							data-github="https://github.com/Akshat-00/uber_eats_restaurant_recommender">
+							<h3 class="project-title">UBER EATS RESTAURANT RECOMMENDATION</h3>
+							<span class="project-domain">Recommender / Data Eng</span>
+						</article>
+
+						<!-- Project D -->
+						<article class="project-card"
+							role="button" tabindex="0" aria-haspopup="dialog"
+							data-title="Movie Industry Data Analysis"
+							data-domain="Data Visualization"
+							data-stack="R, dplyr, tidyr, ggplot2, ggridges, treemapify, RColorBrewer, Tableau, Excel, CSV data wrangling"
+							data-description="Explored global movie datasets to understand how genre, runtime, and budget relate to revenue. Built a clean R pipeline for data prep and visual storytelling, then created Tableau dashboards and choropleth maps to surface country level patterns. The analysis highlights which genres and budget bands tend to outperform, helping stakeholders prioritize investments and marketing focus with clear, interactive visuals."
+							data-github="https://github.com/Akshat-00/movie_industry_data_analysis">
+							<h3 class="project-title">MOVIE INDUSTRY DATA ANALYSIS</h3>
+							<span class="project-domain">Data Visualization</span>
+						</article>
+
+
+						<!-- Project E -->
+						<article class="project-card"
+							role="button" tabindex="0" aria-haspopup="dialog"
+							data-title="Animal Classification (CNN)"
+							data-domain="Image Processing"
+							data-stack="Python, TensorFlow, Keras, OpenCV, Pillow, Matplotlib, Seaborn,Jupyter Notebook"
+							data-description="Built a Convolutional Neural Network (CNN) to classify animal images into cats, dogs, and wild species. Unlike typical classifiers, this project tested the model’s robustness to real-world distortions by evaluating performance on blurred, brightened, rotated, and noisy images. The analysis revealed how accuracy drops under different conditions, offering insights into model resilience and real-world deployment challenges."
+							data-github="https://github.com/Akshat-00/Animal_Classification">
+							<h3 class="project-title">ANIMAL CLASSIFICATION (CNN)</h3>
+							<span class="project-domain">Image Processing</span>
+						</article>
+
+						<!-- Card F: Other Projects -->
+						<a class="project-card other"
+						href="https://github.com/Akshat-00?tab=repositories"
+						target="_blank" rel="noopener">
+						<h3 class="project-title">OTHER PROJECTS</h3>
+						<span class="project-domain">More on GitHub</span>
+						</a>
+
 						</div>
-				
+					</div>
+
+					<!-- Reusable Project Modal -->
+					<div id="project-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" hidden>
+						<div class="modal-backdrop" data-close></div>
+						<div class="modal-content" role="document">
+						<button class="close" aria-label="Close" data-close>&times;</button>
+						<h2 id="project-modal-title"></h2>
+						<a id="github-link" href="#" target="_blank" rel="noopener" aria-label="View on GitHub">
+							<i class="bx bxl-github"></i>
+						</a>
+						<p id="project-description"></p>
+						<div class="modal-tags" aria-label="Tech stack"></div>
+						<div class="project-navigation">
+							<button id="prev-project" class="arrow-btn" aria-label="Previous project"><i class='bx bx-chevron-left'></i></button>
+							<button id="next-project" class="arrow-btn" aria-label="Next project"><i class='bx bx-chevron-right'></i></button>
+						</div>
+						</div>
 					</div>
 				</section>
-  
+
 
 				<!-- Skills & Interests Section -->
 				<section id="skills" class="wrapper style2 fade-up">
@@ -227,23 +325,45 @@
 						<h2 class = "skills-heading">Skills</h2>
 						
 							<div class="skill-category">
-								<h3>Programming Languages</h3>
+								<h3>Programming & Query Languages</h3>
 								<div class="skill-grid">
 									<div class="skill-item"><img src="images/icons/Python.svg" alt="Python"><span>Python</span></div>
 									<div class="skill-item"><img src="images/icons/R.svg" alt="R"><span>R</span></div>
 									<div class="skill-item"><img src="images/icons/sql.svg" alt="C#"><span>SQL</span></div>
 									<div class="skill-item"><img src="images/icons/java.svg" alt="Java"><span>Java</span></div>
-									<div class="skill-item"><img src="images/icons/C.svg" alt="JavaScript"><span>C</span></div>
 								</div>
 							</div>
-						
+
 							<div class="skill-category">
-								<h3>Machine Learning, Cloud & Database</h3>
+								<h3>Data Science & Machine Learning</h3>
 								<div class="skill-grid">
-									<div class="skill-item"><img src="images/icons/ML Algo.svg" alt="ML Algorithms"><span class="skill-item-exception">ML Algorithms</span></div>
-									<div class="skill-item"><img src="images/icons/aws.svg" alt="AWS"><span>AWS</span></div>
-									<div class="skill-item"><img src="images/icons/brain.png" alt="Lib"><span class="skill-item-exception">ML Libraries</span></div>
+									<div class="skill-item"><span>Scikit-learn</span></div>
+									<div class="skill-item"><span>TensorFlow</span></div>
+									<div class="skill-item"><span>PyTorch</span></div>
+									<div class="skill-item"><span>Pandas</span></div>
+									<div class="skill-item"><span>NumPy</span></div>
+									<div class="skill-item"><span>Spark MLlib</span></div>
+								</div>
+							</div>
+
+							<div class="skill-category">
+								<h3>Database & Cloud</h3>
+								<div class="skill-grid">
 									<div class="skill-item"><img src="images/icons/post.svg" alt="Lib"><span>PostgreSQL</span></div>
+									<div class="skill-item"><img src="images/icons/mysql.png" alt="Lib"><span>MySQL</span></div>
+									<div class="skill-item"><img src="images/icons/snowflake.svg" alt="Lib"><span>Snowflake</span></div>
+									<div class="skill-item"><img src="images/icons/aws.svg" alt="AWS"><span>AWS</span></div>
+									<div class="skill-item"><img src="images/icons/google_cloud.svg" alt="GCP"><span>GCP</span></div>
+								</div>
+							</div>
+
+							<div class="skill-category">
+								<h3>Visualization & BI</h3>
+								<div class="skill-grid">
+									<div class="skill-item"><img src="images/icons/tableau.png" alt="Tableau"><span>Tableau</span></div>
+									<div class="skill-item"><img src="images/icons/powerBI.svg" alt="Lib"><span>Power BI</span></div>
+									<div class="skill-item"><span>Matplotlib</span></div>
+									<div class="skill-item"><span>Seaborn</span></div>
 								</div>
 							</div>
 
@@ -261,9 +381,10 @@
 							<div class="skill-category">
 								<h3>Tools & Productivity</h3>
 								<div class="skill-grid">
-									<div class="skill-item"><img src="images/icons/VS COde.svg" alt="VS Code"><span class="skill-item-exception">Visual Studio</span></div>
-									<div class="skill-item"><img src="images/icons/tableau.png" alt="Tableau"><span>Tableau</span></div>
 									<div class="skill-item"><img src="images/icons/git.svg" alt="Git"><span>Git</span></div>
+									<div class="skill-item"><img src="images/icons/github.svg" alt="GitHub"><span>GitHub</span></div>
+									<div class="skill-item"><img src="images/icons/jupyter.png" alt="Jupyter"><span>Jupyter</span></div>
+									<div class="skill-item"><img src="images/icons/VS COde.svg" alt="VS Code"><span class="skill-item-exception">Visual Studio</span></div>
 									<div class="skill-item"><img src="images/icons/MsOffice.svg" alt="Office"><span>Office</span></div>
 									<div class="skill-item"><img src="images/icons/postman.svg" alt="Postman"><span>Postman</span></div>
 								</div>
@@ -271,138 +392,58 @@
 					</div>
 				</section>
 
-				
-				<!-- Projects Section -->
-				<section id="projects" class="wrapper style3 fade-up">
-    				<div class="inner">
-        				<h2 class ="project-heading">Projects</h2>
-        				<div class="projects-container">
-            
-							<!-- Project A -->
-							<div class="project-card" 
-							data-description="<span class='highlight-label'>Tech Stack:</span> Python, Pandas, scikit-learn, Seaborn, Matplotlib, PCA
-
-							Performed unsupervised user segmentation on Expedia travel data to identify distinct traveler personas based on booking behavior, travel duration, planning time, and distance.
-
-							Built a complete clustering pipeline including feature engineering (booking_ratio, travel_duration, days_in_advance), data scaling, and dimensionality reduction using PCA. Applied and compared K-Means and Agglomerative Clustering on large-scale user data.
-							
-							Evaluated cluster quality using Silhouette Score and Davies-Bouldin Index, and visualized segment behavior through PCA scatter plots and feature-wise bar charts. Uncovered four actionable user groups to support personalization and targeted marketing.">
-								<h3>EXPEDIA CLUSTERING ANALYSIS</h3>
-								<h4 style="font-family: cursive">Domain: Unsupervised Machine Learning</h4>
-								<a href="https://github.com/Akshat-00/expedia_clustering_analysis" target="_blank"></a>
-							</div>
-
-							<!-- Project B -->
-							<div class="project-card" 
-							data-description="<span class='highlight-label'>Tech Stack:</span> PySpark, Spark MLlib, AWS S3, AWS Athena, SQL
-							
-							Developed a scalable restaurant recommendation system by analyzing Uber Eats data (~1M menu items) using Apache Spark and cloud-based tools. Data was cleaned, normalized, and stored in AWS S3, with SQL-based aggregation performed using Athena.
-							
-							Joined and transformed large datasets to engineer features like average menu price and geographic location. Built a cosine similarity-based model using Spark MLlib to recommend restaurants with similar pricing and proximity.
-							
-							Evaluated results through multiple sample runs, uncovering highly similar restaurants even across different cuisines. Proposed future improvements such as integrating cuisine-type classification and supporting real-time data refresh using APIs.">
-								<h3>UBER EATS RESTAURANT RECOMMENDATION</h3>
-								<h4 style="font-family: cursive">Domain: Data Engineering & Recommender Systems</h4>
-								<a href="https://github.com/Akshat-00/uber_eats_restaurant_recommender" target="_blank"></a>
-							</div>
-
-							<!-- Project C -->
-							<div class="project-card" 
-							data-description="<span class='highlight-label'>Tech Stack:</span> Python, TensorFlow, Keras, OpenCV, Pillow, Matplotlib, Seaborn
-
-							Developed a CNN-based image classification model to distinguish between cats, dogs, and wild animals using a custom dataset. Extended the project to evaluate the model’s robustness by applying various real-world distortions, including Gaussian blur, brightness adjustments, rotation, and multiple noise types.
-
-							Engineered a full pipeline to automate image transformation, organize variant-level datasets, train and validate the model, and evaluate performance across transformation categories. Visualized performance trends using line and bar charts, and analyzed how transformation severity impacted accuracy.
-
-							Displayed random predictions for each transformation to assess confidence shifts, and proposed improvements through data augmentation and model refinement for real-world deployment scenarios.">
-								<h3>ANIMAL CLASSIFICATION (CNN)</h3>
-								<h4 style="font-family: cursive">Domain: Image Processing</h4>
-								<a href="https://github.com/Akshat-00/Animal_Classification" target="_blank"></a>
-							</div>
-
-							<!-- Project D-->
-							<div class="project-card" 
-							data-description="<span class='highlight-label'>Tech Stack:</span> R, Tableau, ggplot2, ggridges, treemapify, RColorBrewer
-						
-							Analyzed over 7,000 movies released over four decades to identify key factors influencing box office performance, such as runtime, genre, and IMDb scores.
-						
-							Preprocessed and transformed raw movie data in R to enable visual storytelling through ridge plots, correlation heatmaps, and genre-based revenue analysis. Created a combined choropleth in Tableau to compare country-wise average budgets and gross revenues.
-						
-							Designed interactive dashboards and tree plots to uncover genre-specific financial trends, highlighting the rise of Asian markets and the surprising success of niche genres like Family and Animation.">
-							<h3>MOVIE INDUSTRY DATA ANALYSIS</h3>
-							<h4 style="font-family: cursive">Domain: Data Visualization</h4>
-							<a href="https://github.com/Akshat-00/movie_industry_data_visualization" target="_blank"></a>
-							</div>
-						
-							<!-- Project E-->
-							<div class="project-card" 
-							data-description="<span class='highlight-label'>Tech Stack:</span>R, Excel, psych, car, QuantPsyc, leaps
-
-								Performed exploratory data analysis and regression modeling on 1990 California housing data to identify key factors influencing median house prices, such as income, population, and proximity to major cities.
-								
-								Engineered an end-to-end R pipeline to clean and transform data, conduct correlation analysis, evaluate multicollinearity using VIF, and build predictive models. Used stepwise regression and variable transformation to improve model accuracy and interpretability.
-
-								Assessed model diagnostics through residual plots and QQ plots, and calculated standardized beta coefficients to highlight the most impactful features.">
-								<h3>CALIFORNIA HOUSING PRICE ANALYSIS 1990</h3>
-								<h4 style="font-family: cursive">Domain: Data Analysis & Regression</h4>
-								<a href="https://github.com/Akshat-00/California_Housing" target="_blank"></a>
-							</div>
-        				</div>
-    				</div>
-					<!-- Project Pop-up Modal -->
-					<div id="project-modal" class="modal">
-						<div class="modal-content">
-							<span class="close">&times;</span>
-							<h2 id="project-title"></h2>
-							<a id="github-link" href="#" target="_blank">
-								<i class='bx bxl-github'></i>
-							</a>
-							<p id="project-description"></p>
-							<div class="project-navigation">
-								<button id="prev-project" class="arrow-btn">
-									<i class='bx bx-chevron-left'></i>
-								</button>
-								<button id="next-project" class="arrow-btn">
-									<i class='bx bx-chevron-right'></i>
-								</button>
-							</div>
-						</div>
-					</div>
-				</section>
+				<!-- Contact Section -->
 				<section id="contact" class="wrapper style2 fade-up">
-					<div class="inner">
-					  <h2>Contact Me</h2>
-					  <p>If you're interested in collaborating or just want to connect, feel free to reach out!</p>
-					  
-					  <form method="post" action="https://formspree.io/f/mpwpglre">
-						<div class="fields">
-						  <div class="field half">
-							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
-						  </div>
-						  <div class="field half">
-							<label for="email">Email</label>
-							<input type="email" name="email" id="email" />
-						  </div>
-						  <div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="5"></textarea>
-						  </div>
+				<div class="inner">
+					<h2>Contact Me</h2>
+					<p>If you're interested in collaborating or just want to connect, feel free to reach out!</p>
+
+					<!-- Contact Form (Formspree) -->
+					<form method="post" action="https://formspree.io/f/mpwpglre">
+					<!-- Optional: redirect to a thank-you page after submit -->
+					<input type="hidden" name="_redirect" value="thankyou.html" />
+
+					<div class="fields">
+						<div class="field half">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" placeholder="Your name" required />
 						</div>
-						<ul class="actions">
-						  <li><input type="submit" value="Send Message" class="primary" /></li>
-						</ul>
-					  </form>
-				  
-					  <!-- Social Icons in One Line -->
-					  <ul class="icons" style="justify-content: center; display: flex; gap: 30px; margin-top: 30px;">
-						<li><a href="mailto:akshatgaur.06@gmail.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
-						<li><a href="https://linkedin.com/in/akshatgaur0610" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/Akshat-00" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-					  </ul>
+						<div class="field half">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" placeholder="you@example.com" required />
+						</div>
+						<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="5" placeholder="Write your message here..." required></textarea>
+						</div>
 					</div>
-				  </section>
-				  
+
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+					</ul>
+					</form>
+
+					<!-- Social Links -->
+					<ul class="icons contact-icons">
+					<li>
+						<a href="mailto:akshatgaur.06@gmail.com" class="icon solid fa-envelope" aria-label="Email" target="_blank" rel="noopener">
+						<span class="label">Email</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://linkedin.com/in/akshatgaur0610" class="icon brands fa-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener">
+						<span class="label">LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/Akshat-00" class="icon brands fa-github" aria-label="GitHub" target="_blank" rel="noopener">
+						<span class="label">GitHub</span>
+						</a>
+					</li>
+					</ul>
+				</div>
+				</section>
+
 				  
 			</div>
 
@@ -414,7 +455,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/popup.js"></script>
+			<script src="assets/js/popup.js"></script> 
 
 	</body>
 </html>

@@ -1,53 +1,86 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("project-modal");
-    const modalTitle = document.getElementById("project-title");
-    const modalDescription = document.getElementById("project-description");
-    const githubLink = document.getElementById("github-link");
-    const closeModal = document.querySelector(".close");
-    const prevBtn = document.getElementById("prev-project");
-    const nextBtn = document.getElementById("next-project");
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById('project-modal');
+  var modalTitle = document.getElementById('project-title');
+  var modalDescription = document.getElementById('project-description');
+  var githubLink = document.getElementById('github-link');
+  var tagsBox = modal.querySelector('.modal-tags');
+  var closeBtn = modal ? modal.querySelector('.close') : null;
+  var prevBtn = document.getElementById('prev-project');
+  var nextBtn = document.getElementById('next-project');
 
-    const cards = document.querySelectorAll(".project-card");
-    const projectData = Array.from(cards).map(card => {
-        return {
-            title: card.querySelector("h3")?.textContent || "Untitled",
-            description: card.dataset.description || "No description provided.",
-            github: card.querySelector("a")?.href || "#"
-        };
+var cards = Array.prototype.slice.call(document.querySelectorAll('.project-card'))
+  .filter(function(card){ return !card.classList.contains('other'); });
+  if (!modal || cards.length === 0) return;
+
+  var projectData = cards.map(function (card) {
+    var h3 = card.querySelector('h3');
+    var a  = card.querySelector('a[href]');
+    return {
+      title: h3 ? h3.textContent : 'Untitled',
+      description: card.getAttribute('data-description') || '',
+      github: card.getAttribute('data-github') || (a ? a.getAttribute('href') : '#'),
+      stack: (card.getAttribute('data-stack') || '')
+        .split(',').map(function(s){ return s.trim(); }).filter(Boolean)
+    };
+  });
+
+  var currentIndex = -1;
+
+  function renderTags(stack){
+    if (!tagsBox) return;
+    tagsBox.innerHTML = '';
+    stack.forEach(function (t) {
+      var span = document.createElement('span');
+      span.className = 'tag';
+      span.textContent = t;
+      tagsBox.appendChild(span);
     });
+  }
 
-    let currentIndex = 0;
+  function openModal(i) {
+    currentIndex = i;
+    var data = projectData[i];
 
-    function openModal(index) {
-        const project = projectData[index];
-        currentIndex = index;
-        modalTitle.textContent = project.title;
-        modalDescription.innerHTML = project.description;
-        githubLink.href = project.github;
-        modal.style.display = "flex";
-    }
+    if (modalTitle) modalTitle.textContent = data.title;
+    if (modalDescription) modalDescription.innerHTML = data.description;
+    if (githubLink) githubLink.setAttribute('href', data.github);
+    renderTags(data.stack);
 
-    cards.forEach((card, index) => {
-        card.addEventListener("click", () => openModal(index));
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    if (prevBtn) prevBtn.disabled = (currentIndex <= 0);
+    if (nextBtn) nextBtn.disabled = (currentIndex >= projectData.length - 1);
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Open handlers (click + keyboard)
+  cards.forEach(function (card, idx) {
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('click', function () { openModal(idx); });
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(idx); }
     });
+  });
 
-    closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
+  // Close handlers
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
 
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + projectData.length) % projectData.length;
-        openModal(currentIndex);
-    });
+  // Don’t let clicks on the GitHub link close or be swallowed
+  if (githubLink) githubLink.addEventListener('click', function (e) { e.stopPropagation(); });
 
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % projectData.length;
-        openModal(currentIndex);
-    });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeModal(); });
 
-    window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
+  // Prev/Next
+  if (prevBtn) prevBtn.addEventListener('click', function () {
+    if (currentIndex > 0) openModal(currentIndex - 1);
+  });
+  if (nextBtn) nextBtn.addEventListener('click', function () {
+    if (currentIndex < projectData.length - 1) openModal(currentIndex + 1);
+  });
 });

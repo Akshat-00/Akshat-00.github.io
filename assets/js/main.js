@@ -186,6 +186,23 @@
 
 				}
 			});
+		// Scroll-spy for sidebar
+		document.addEventListener('scroll', () => {
+		const sections = document.querySelectorAll('section[id]');
+		const links = document.querySelectorAll('#sidebar nav a');
+		let current = null;
+
+		sections.forEach(sec => {
+			const rect = sec.getBoundingClientRect();
+			if (rect.top <= 120 && rect.bottom >= 120) current = sec.id;
+		});
+
+		links.forEach(a => {
+			a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+		});
+		});
+		
+
 
 })(jQuery);
 
